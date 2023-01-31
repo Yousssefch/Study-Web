@@ -15,7 +15,11 @@ video {
     overflow: hidden;
 }
 .square{
-    height: 10000px;
+    position: absolute;
+    display: flex;
+    top: 0;
+    opacity: 50%;
+    height: 100%;
     width: 100%;
     background-color: black;
 }
