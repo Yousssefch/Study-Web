@@ -18,12 +18,9 @@ video {
 }
 .timer{
     position: absolute;
-    display: flex;
-    justify-content: center;
     font-family: 'Poppins',sans-serif;
     width: 100%;
     font-size: 40px;
-    height: fit-content;
     flex-direction: column;
     text-align: center;
     top: 40%;
@@ -37,4 +34,20 @@ video {
     height: 100%;
     width: 100%;
     background-color: black;
+}
+.startButton{
+    height: 40px;
+    width: 80px;
+    font-family: 'Poppins',sans-serif;
+    border-radius: 5px;
+    border: none;
+    opacity: 60%;
+}
+.startButton:hover{
+    cursor: pointer;
+    opacity: 30%;
+    transition-duration: 1s;
+}
+.buttons{
+    border: none;
 }
