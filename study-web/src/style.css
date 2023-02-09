@@ -61,3 +61,13 @@ video {
 .text-timer{
     height: 100px;
 }
+.playlist{
+    position: absolute;
+    height: 100px;
+    width: 300px;
+    bottom: 20px;
+    left: 20px;
+    overflow: hidden;
+}
+.spotify{
+}
