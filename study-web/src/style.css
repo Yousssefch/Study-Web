@@ -52,3 +52,12 @@ video {
 .buttons{
     border: none;
 }
+.stateName{
+    font-size: 30px;
+    height: 30px;
+    color: gray;
+
+}
+.text-timer{
+    height: 100px;
+}

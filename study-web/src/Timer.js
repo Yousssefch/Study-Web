@@ -53,6 +53,7 @@ function Timer() {
     }
     return(
         <div className="timer">
+        <h1 className="stateName">Study cycle</h1>
         <h1 className="text-timer" id="Countdown">{countDownMinute}:{countDownSecond}</h1>
         <div className="buttons">
         <button type="button" className="startButton" onClick={Activate}>{buttonText}</button>
