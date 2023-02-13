@@ -10,6 +10,7 @@ function Timer() {
     const [isActivated,setisActivated] = useState(false);
     const [countDownSecond,setCountSecond] = useState(startingSeconds);
     const [countDownMinute,setCountMinute] = useState(startingMinutes);
+    const [state,setState]= useState("Study Cicle");
     useEffect(()=>{
         let interval = setInterval(()=>{
             if (isActivated===true) {
@@ -30,7 +31,12 @@ function Timer() {
                 setCountMinute(countDownMinute-1);
             }
             else if (countDownMinute==0) {
-                Break();
+                if (state==="Study Cicle") {
+                    Break();
+                }
+                else{
+                    Study();
+                }
             }
         }
         console.log("minutes:"+countDownMinute+"seondes:"+countDownSecond);
@@ -50,13 +56,32 @@ function Timer() {
         setCountSecond(0);
         setisActivated(false);
         setbuttonText('Start');
+        setState("Break Time");
+    }
+    function Restart() {
+        setCountSecond(0);
+        setisActivated(false);
+        setbuttonText("Start");
+        if (state==="Study Cicle") {
+            setCountMinute(20);
+        }
+        else {
+            setCountMinute(5);
+        }
+    }
+    function Study() {
+        setCountMinute(20);
+        setCountSecond(0);
+        setState("Study Cicle");
+        setisActivated(false);
     }
     return(
         <div className="timer">
-        <h1 className="stateName">Study cycle</h1>
+        <h1 className="stateName">{state}</h1>
         <h1 className="text-timer" id="Countdown">{countDownMinute}:{countDownSecond}</h1>
         <div className="buttons">
         <button type="button" className="startButton" onClick={Activate}>{buttonText}</button>
+        <button type="button" className="restartButton" onClick={Restart}>Restart</button>
         </div>
         </div>
 

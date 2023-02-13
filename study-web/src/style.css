@@ -69,5 +69,24 @@ video {
     left: 20px;
     overflow: hidden;
 }
-.spotify{
+.restartButton{
+    height: 40px;
+    width: 80px;
+    font-family: 'Poppins',sans-serif;
+    border-radius: 5px;
+    border: none;
+    opacity: 60%;
+    margin-left: 10px;
+    transition-duration: 1s; 
+}
+.restartButton:hover{
+    cursor: pointer;
+    opacity: 30%;
+    transition-duration: 1s;    
+}
+.Title{
+    position: absolute;
+    font-family: 'Poppins',sans-serif;
+    color: ghostwhite;
+    margin: 10px;
 }
