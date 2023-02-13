@@ -5,7 +5,7 @@ import './style.css'
 function Title(){
     return(
         <>
-            <h1 className="Title">Promodoro Timer</h1>
+            <h1 className="Title">Pomodoro Timer</h1>
         </>
     )
 }
