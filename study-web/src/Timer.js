@@ -10,7 +10,7 @@ function Timer() {
     const [isActivated,setisActivated] = useState(false);
     const [countDownSecond,setCountSecond] = useState(startingSeconds);
     const [countDownMinute,setCountMinute] = useState(startingMinutes);
-    const [state,setState]= useState("Study Cicle");
+    const [state,setState]= useState("Study Cycle");
     useEffect(()=>{
         let interval = setInterval(()=>{
             if (isActivated===true) {
@@ -31,7 +31,7 @@ function Timer() {
                 setCountMinute(countDownMinute-1);
             }
             else if (countDownMinute==0) {
-                if (state==="Study Cicle") {
+                if (state==="Study Cycle") {
                     Break();
                 }
                 else{
@@ -62,7 +62,7 @@ function Timer() {
         setCountSecond(0);
         setisActivated(false);
         setbuttonText("Start");
-        if (state==="Study Cicle") {
+        if (state==="Study Cycle") {
             setCountMinute(20);
         }
         else {
@@ -72,7 +72,7 @@ function Timer() {
     function Study() {
         setCountMinute(20);
         setCountSecond(0);
-        setState("Study Cicle");
+        setState("Study Cycle");
         setisActivated(false);
     }
     return(
